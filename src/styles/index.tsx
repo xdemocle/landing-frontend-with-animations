@@ -7,7 +7,7 @@ export const GlobalStyle = createGlobalStyle`
 
   html, body {
     width: 100%;
-    height: 100%;
+    min-height: 100%;
   }
 
   body {
@@ -23,5 +23,29 @@ export const GlobalStyle = createGlobalStyle`
   code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
       monospace;
+  }
+
+  @keyframes float {
+    0% {
+      transform: translatey(0px);
+    }
+    50% {
+      transform: translatey(-20px);
+    }
+    100% {
+      transform: translatey(0px);
+    }
+  }
+
+  @keyframes float2 {
+    0% {
+      transform: translatey(30px);
+    }
+    50% {
+      transform: translatey(-10px);
+    }
+    100% {
+      transform: translatey(30px);
+    }
   }
 `;

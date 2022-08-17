@@ -1,4 +1,7 @@
 import styled from 'styled-components';
+import useDictionary from '../../hooks/use-dictionary';
+import { getTextTranspiled } from '../../utilities';
+import Tooltip from '../molecules/tooltip';
 
 const Container = styled.section`
   display: flex;
@@ -9,7 +12,6 @@ const Container = styled.section`
 
   margin: 24px auto;
   width: 425px;
-  height: 257px;
 
   background: linear-gradient(
     180deg,
@@ -43,15 +45,30 @@ const Main = styled.main`
 `;
 
 const LandingCard = () => {
+  const dictionary = useDictionary();
+
   return (
     <Container>
-      <HeaderTitle>🚀 How To Play</HeaderTitle>
+      <HeaderTitle>{dictionary.cardTitle}</HeaderTitle>
       <Main>
         <ol>
-          <li>Guess the right combination of numbers</li>
-          <li>Win N3,000,000 instantly</li>
+          <li>{dictionary.cardOlLi1}</li>
+          <li>
+            {getTextTranspiled(
+              dictionary.cardOlLi2,
+              '{{number}}',
+              <strong>₦3,000,000</strong>
+            )}
+          </li>
         </ol>
-        <div>Sounds unbelievable? Well, guess right & see for yourself!</div>
+        <div>{dictionary.cardSlogan}</div>
+        <Tooltip>
+          {getTextTranspiled(
+            dictionary.tooltipText,
+            '{{number}}',
+            <strong>2</strong>
+          )}
+        </Tooltip>
       </Main>
     </Container>
   );

@@ -2,10 +2,12 @@ import styled from 'styled-components';
 import { ReactComponent as CoinPotSvg } from '../../assets/coin-pot.svg';
 
 const SvgContainer = styled.div`
-  margin-bottom: -88px;
+  margin-bottom: -2px;
+  text-align: center;
 
   svg {
-    width: 500px;
+    margin: 0 auto;
+    zoom: 0.65;
   }
 `;
 
