@@ -17,18 +17,30 @@ const Container = styled.div`
 `;
 
 const FirstLine = styled.div`
+  /* animation-delay: 0.25s !important; */
   font-weight: 700;
 `;
 
 const LastLine = styled.div`
+  animation-delay: 0.15s !important;
   font-weight: 400;
+`;
+
+const Line = styled.div`
+  line-height: 117%;
+  margin: 0;
+  overflow: hidden;
 `;
 
 const Title = ({ firstLine, lastLine }: TitleProps) => {
   return (
     <Container>
-      <FirstLine>{firstLine}</FirstLine>
-      <LastLine>{lastLine}</LastLine>
+      <Line>
+        <FirstLine className="slide-up">{firstLine}</FirstLine>
+      </Line>
+      <Line>
+        <LastLine className="slide-up">{lastLine}</LastLine>
+      </Line>
     </Container>
   );
 };

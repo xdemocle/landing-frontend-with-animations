@@ -1,9 +1,10 @@
+import { useEffect, useState } from 'react';
 import Button from '../../atoms/button';
 import ButtonWrapper from '../../atoms/button-wrapper';
-import Jumbotron from '../../atoms/jumbotron';
-import Title from '../../atoms/title';
+import Jumbotron from '../../molecules/jumbotron';
 import Main from '../../molecules/main';
 import StaticStar from '../../molecules/static-star';
+import Title from '../../molecules/title';
 import LandingBottom from '../../organisms/landing-bottom';
 import LandingCard from '../../organisms/landing-card';
 import Topbar from '../../organisms/topbar';
@@ -13,6 +14,12 @@ interface LandingTemplateProps {
 }
 
 const LandingTemplate = ({ dictionary }: LandingTemplateProps) => {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   return (
     <>
       <Topbar />
@@ -34,7 +41,7 @@ const LandingTemplate = ({ dictionary }: LandingTemplateProps) => {
 
         <LandingCard />
 
-        <ButtonWrapper>
+        <ButtonWrapper transform={mounted ? 'none' : 'translate3d(0, 70%, 0)'}>
           <Button>{dictionary.mainButtonText}</Button>
         </ButtonWrapper>
 
@@ -42,6 +49,7 @@ const LandingTemplate = ({ dictionary }: LandingTemplateProps) => {
         <StaticStar symbol="2" />
         <StaticStar symbol="3" />
         <StaticStar symbol="4" />
+        <StaticStar symbol="5" />
       </Main>
       <LandingBottom />
     </>

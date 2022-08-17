@@ -1,9 +1,10 @@
+import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import useDictionary from '../../hooks/use-dictionary';
 import { getTextTranspiled } from '../../utilities';
 import Tooltip from '../molecules/tooltip';
 
-const Container = styled.section`
+const Container = styled.section<{ transform: string }>`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -21,6 +22,12 @@ const Container = styled.section`
   box-shadow: inset 0px -1px 11px rgba(255, 255, 255, 0.17),
     inset 0px 2px 0px rgba(255, 255, 255, 0.24);
   border-radius: 8px;
+
+  transition: all 1.75s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transform: ${(props) => props.transform};
+  opacity: ${(props) => {
+    return props.transform === 'none' ? 1 : 0;
+  }};
 `;
 
 const HeaderTitle = styled.header`
@@ -46,9 +53,14 @@ const Main = styled.main`
 
 const LandingCard = () => {
   const dictionary = useDictionary();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   return (
-    <Container>
+    <Container transform={mounted ? 'none' : 'translate3d(0, 70%, 0)'}>
       <HeaderTitle>{dictionary.cardTitle}</HeaderTitle>
       <Main>
         <ol>

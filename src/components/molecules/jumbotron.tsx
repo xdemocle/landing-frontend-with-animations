@@ -24,11 +24,21 @@ const LastLine = styled.div`
   font-weight: 700;
 `;
 
+const Line = styled.div`
+  line-height: 117%;
+  margin: 0;
+  overflow: hidden;
+`;
+
 const Jumbotron = ({ firstLine, lastLine }: JumbotronProps) => {
   return (
     <Container>
-      <FirstLine>{firstLine}</FirstLine>
-      <LastLine>{lastLine}</LastLine>
+      <Line>
+        <FirstLine className="slide-up">{firstLine}</FirstLine>
+      </Line>
+      <Line>
+        <LastLine className="slide-up">{lastLine}</LastLine>
+      </Line>
     </Container>
   );
 };

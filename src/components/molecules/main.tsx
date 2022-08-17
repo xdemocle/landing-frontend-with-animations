@@ -6,7 +6,8 @@ interface MainProps {
 }
 
 const Container = styled.div`
-  padding: 124px 104px 44px 104px;
+  position: relative;
+  padding: 90px 104px 44px 104px;
   text-align: center;
   z-index: 1;
 `;

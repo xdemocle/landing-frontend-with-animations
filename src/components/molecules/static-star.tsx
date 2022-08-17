@@ -8,6 +8,7 @@ type ObjectType = {
     top?: string;
     left?: string;
     zoom?: number;
+    rotate?: number;
   };
 };
 
@@ -31,6 +32,12 @@ const starPositions: ObjectType = {
     top: '26.5%',
     left: '63.1%',
     zoom: 0.5
+  },
+  '5': {
+    top: '92%',
+    left: '24%',
+    zoom: 0.7,
+    rotate: -5
   }
 };
 
@@ -50,6 +57,10 @@ const backgroundPositions: ObjectType = {
   '4': {
     x: '-144px',
     y: '0'
+  },
+  '5': {
+    x: '-144px',
+    y: '0'
   }
 };
 
@@ -64,6 +75,7 @@ interface StarProps {
   top: string;
   left: string;
   zoom: number;
+  rotate: number;
 }
 
 const Container = styled.div`
@@ -80,6 +92,7 @@ const Star = styled.div<StarProps>`
   top: ${(props) => props.top};
   left: ${(props) => props.left};
   zoom: ${(props) => props.zoom};
+  transform: rotate(${(props) => props.rotate}deg);
   z-index: -1;
 `;
 
@@ -91,6 +104,7 @@ const StaticStar = ({ symbol }: StaticStarProps) => {
         top={starPositions[symbol].top || ''}
         left={starPositions[symbol].left || ''}
         zoom={starPositions[symbol].zoom || 1}
+        rotate={starPositions[symbol].rotate || 0}
         x={backgroundPositions[symbol].x || ''}
         y={backgroundPositions[symbol].y || ''}
       />
