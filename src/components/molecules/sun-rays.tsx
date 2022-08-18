@@ -22,7 +22,7 @@ const RayBox = styled.div`
   top: 0px;
   left: 0;
   right: 0;
-  bottom: -150px;
+  bottom: -200px;
   width: 70px;
   animation: rotation 45s linear infinite;
   animation-direction: reverse;
@@ -45,13 +45,15 @@ const Ray = styled.div`
   border-radius: 80% 80% 0 0;
   position: absolute;
   opacity: 0.1;
-  zoom: 3;
+  zoom: 2.5;
 
   /* height: 170px; */
   width: 40px !important;
 `;
 
 const Ray1 = styled(Ray)`
+  height: 170px;
+  width: 30px;
   top: -175px;
   left: 15px;
   transform: rotate(180deg);
@@ -59,7 +61,7 @@ const Ray1 = styled(Ray)`
 
 const Ray2 = styled(Ray)`
   height: 100px;
-  width: 30px;
+  width: 8px;
   top: -90px;
   left: 75px;
   transform: rotate(220deg);
@@ -67,7 +69,7 @@ const Ray2 = styled(Ray)`
 
 const Ray3 = styled(Ray)`
   height: 170px;
-  width: 30px;
+  width: 50px;
   transform: rotate(250deg);
   top: -80px;
   left: 100px;
@@ -75,7 +77,7 @@ const Ray3 = styled(Ray)`
 
 const Ray4 = styled(Ray)`
   height: 120px;
-  width: 30px;
+  width: 14px;
   transform: rotate(305deg);
   top: 30px;
   left: 100px;
@@ -91,7 +93,7 @@ const Ray5 = styled(Ray)`
 
 const Ray6 = styled(Ray)`
   height: 90px;
-  width: 30px;
+  width: 50px;
   transform: rotate(30deg);
   top: 60px;
   left: -40px;
@@ -99,7 +101,7 @@ const Ray6 = styled(Ray)`
 
 const Ray7 = styled(Ray)`
   height: 180px;
-  width: 30px;
+  width: 10px;
   transform: rotate(70deg);
   top: -35px;
   left: -40px;
@@ -115,7 +117,7 @@ const Ray8 = styled(Ray)`
 
 const Ray9 = styled(Ray)`
   height: 80px;
-  width: 30px;
+  width: 10px;
   top: -65px;
   left: -60px;
   transform: rotate(120deg);
@@ -123,7 +125,7 @@ const Ray9 = styled(Ray)`
 
 const Ray10 = styled(Ray)`
   height: 190px;
-  width: 30px;
+  width: 23px;
   transform: rotate(150deg);
   top: -185px;
   left: -60px;
