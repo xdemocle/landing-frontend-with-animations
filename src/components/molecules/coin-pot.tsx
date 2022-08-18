@@ -11,10 +11,11 @@ const SvgContainer = styled.div`
 
   svg {
     zoom: 0.4;
-    margin-bottom: -50px;
+    margin-bottom: -30px;
 
     @media ${device.tablet} {
       zoom: 0.65;
+      margin-bottom: -3px;
     }
   }
 `;

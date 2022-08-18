@@ -41,8 +41,8 @@ const FloatingCoin = ({ type = 'left' }: FloatingCoinProps) => {
         ? '25%'
         : '15%'
       : type === 'left'
-      ? '25%'
-      : '15%';
+      ? '15%'
+      : '5%';
 
   const leftPosition =
     width < 768
