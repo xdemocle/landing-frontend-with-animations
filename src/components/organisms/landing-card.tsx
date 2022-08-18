@@ -2,17 +2,18 @@ import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import useDictionary from '../../hooks/use-dictionary';
 import { getTextTranspiled } from '../../utilities';
+import { device } from '../../utilities/device';
 import Tooltip from '../molecules/tooltip';
 
 const Container = styled.section<{ transform: string }>`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 24px 27px;
+  padding: 24px 16px;
   gap: 16px;
 
   margin: 24px auto;
-  width: 425px;
+  max-width: 425px;
 
   background: linear-gradient(
     180deg,
@@ -28,6 +29,10 @@ const Container = styled.section<{ transform: string }>`
   opacity: ${(props) => {
     return props.transform === 'none' ? 1 : 0;
   }};
+
+  @media ${device.tablet} {
+    padding: 24px 27px;
+  }
 `;
 
 const HeaderTitle = styled.header`
@@ -39,6 +44,10 @@ const HeaderTitle = styled.header`
   line-height: 160%;
   text-align: center;
   color: #ffffff;
+`;
+
+const OlStyled = styled.ol`
+  padding: 0 0 0 16px;
 `;
 
 const Main = styled.main`
@@ -63,7 +72,7 @@ const LandingCard = () => {
     <Container transform={mounted ? 'none' : 'translate3d(0, 70%, 0)'}>
       <HeaderTitle>{dictionary.cardTitle}</HeaderTitle>
       <Main>
-        <ol>
+        <OlStyled>
           <li>{dictionary.cardOlLi1}</li>
           <li>
             {getTextTranspiled(
@@ -72,7 +81,7 @@ const LandingCard = () => {
               <strong>₦3,000,000</strong>
             )}
           </li>
-        </ol>
+        </OlStyled>
         <div>{dictionary.cardSlogan}</div>
         <Tooltip>
           {getTextTranspiled(

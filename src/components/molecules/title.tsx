@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
 import styled from 'styled-components';
+import { device } from '../../utilities/device';
 
 interface TitleProps {
   firstLine: string;
@@ -8,17 +9,20 @@ interface TitleProps {
 
 const Container = styled.div`
   font-style: normal;
-  font-size: 29.4318px;
+  font-size: 16px;
   line-height: 111.5%;
   letter-spacing: -0.06em;
   text-align: center;
   color: #ffffff;
   margin-top: 23px;
+
+  @media ${device.tablet} {
+    font-size: 29.5px;
+  }
 `;
 
 const FirstLine = styled.div`
-  /* animation-delay: 0.25s !important; */
-  font-weight: 700;
+  font-weight: 400;
 `;
 
 const LastLine = styled.div`

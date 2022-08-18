@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import { normalize } from 'styled-normalize';
-import BodyBackground from '../assets/background.png';
+import BodyBackground from '../assets/background.jpg';
 
 export const GlobalStyle = createGlobalStyle`
   ${normalize}

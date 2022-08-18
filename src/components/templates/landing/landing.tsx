@@ -50,6 +50,7 @@ const LandingTemplate = ({ dictionary }: LandingTemplateProps) => {
         <StaticStar symbol="3" />
         <StaticStar symbol="4" />
         <StaticStar symbol="5" />
+        <StaticStar symbol="6" />
       </Main>
       <LandingBottom />
     </>

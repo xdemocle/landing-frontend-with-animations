@@ -1,13 +1,21 @@
 import styled from 'styled-components';
 import { ReactComponent as CoinPotSvg } from '../../assets/coin-pot.svg';
+import { device } from '../../utilities/device';
 
 const SvgContainer = styled.div`
-  margin-bottom: -2px;
-  text-align: center;
+  position: fixed;
+
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 
   svg {
-    margin: 0 auto;
-    zoom: 0.65;
+    zoom: 0.4;
+    margin-bottom: -50px;
+
+    @media ${device.tablet} {
+      zoom: 0.65;
+    }
   }
 `;
 

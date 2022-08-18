@@ -34,9 +34,15 @@ const starPositions: ObjectType = {
     zoom: 0.5
   },
   '5': {
-    top: '92%',
+    top: '105%',
     left: '24%',
     zoom: 0.7,
+    rotate: -5
+  },
+  '6': {
+    top: '70%',
+    left: '84%',
+    zoom: 0.35,
     rotate: -5
   }
 };
@@ -61,6 +67,10 @@ const backgroundPositions: ObjectType = {
   '5': {
     x: '-144px',
     y: '0'
+  },
+  '6': {
+    x: '-94px',
+    y: '0'
   }
 };
 
@@ -80,7 +90,7 @@ interface StarProps {
 
 const Container = styled.div`
   text-align: center;
-  z-index: 0;
+  z-index: -1;
 `;
 
 const Star = styled.div<StarProps>`

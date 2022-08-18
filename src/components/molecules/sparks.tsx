@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { ReactComponent as SparksSvg } from '../../assets/sparks.svg';
 
 const SvgContainer = styled.div`
-  /* margin-bottom: -2px; */
   text-align: center;
   position: absolute;
   left: 0;
@@ -12,7 +11,6 @@ const SvgContainer = styled.div`
 
   svg {
     margin: 0 auto;
-    /* zoom: 0.65; */
   }
 `;
 

@@ -3,7 +3,8 @@ import { useEffect, useState } from 'react';
 import CoinPot from '../molecules/coin-pot';
 import FloatingCoin from '../molecules/floating-coin';
 import LandingBottomContainer from '../molecules/landing-bottom-container';
-import Sparks from '../molecules/sparks';
+
+// import Sparks from '../molecules/sparks';
 
 const LandingBottom = () => {
   // const dictionary = useDictionary();
@@ -18,7 +19,7 @@ const LandingBottom = () => {
       transform={mounted ? 'none' : 'translate3d(0, 70%, 0)'}
     >
       <CoinPot />
-      <Sparks />
+      {/* <Sparks /> */}
       <FloatingCoin />
       <FloatingCoin type="right" />
     </LandingBottomContainer>
