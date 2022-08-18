@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/landing-frontend-with-animations/static/js/main.86f397ee.js",
+    "main.js": "/landing-frontend-with-animations/static/js/main.bb4880e7.js",
     "static/js/787.30faee8c.chunk.js": "/landing-frontend-with-animations/static/js/787.30faee8c.chunk.js",
     "static/media/coin-pot.svg": "/landing-frontend-with-animations/static/media/coin-pot.93d93e3fed13915a1b898506094e1421.svg",
     "static/media/background.jpg": "/landing-frontend-with-animations/static/media/background.66abd83cf5880ba9f432.jpg",
@@ -10,10 +10,10 @@
     "index.html": "/landing-frontend-with-animations/index.html",
     "static/media/arrow-right.svg": "/landing-frontend-with-animations/static/media/arrow-right.edfd1d12d6cd53f843d0cc3201dd866b.svg",
     "static/media/calendar.svg": "/landing-frontend-with-animations/static/media/calendar.f9304e40debd85f4960fff3e8f55ce48.svg",
-    "main.86f397ee.js.map": "/landing-frontend-with-animations/static/js/main.86f397ee.js.map",
+    "main.bb4880e7.js.map": "/landing-frontend-with-animations/static/js/main.bb4880e7.js.map",
     "787.30faee8c.chunk.js.map": "/landing-frontend-with-animations/static/js/787.30faee8c.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.86f397ee.js"
+    "static/js/main.bb4880e7.js"
   ]
 }
