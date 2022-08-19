@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.js": "/landing-frontend-with-animations/static/js/main.38b27e0f.js",
+    "main.js": "/landing-frontend-with-animations/static/js/main.52b84866.js",
     "static/js/787.30faee8c.chunk.js": "/landing-frontend-with-animations/static/js/787.30faee8c.chunk.js",
     "static/media/coin-pot.svg": "/landing-frontend-with-animations/static/media/coin-pot.93d93e3fed13915a1b898506094e1421.svg",
+    "static/media/rays-main.png": "/landing-frontend-with-animations/static/media/rays-main.9375fe0391ef8313a465.png",
     "static/media/background.jpg": "/landing-frontend-with-animations/static/media/background.66abd83cf5880ba9f432.jpg",
     "static/media/coin-right.svg": "/landing-frontend-with-animations/static/media/coin-right.cc258ade7b8778387a7f2792b55d1574.svg",
     "static/media/coin-left.svg": "/landing-frontend-with-animations/static/media/coin-left.3deb0c8efaedb2d4ab5e09be7ae2e496.svg",
@@ -10,10 +11,10 @@
     "index.html": "/landing-frontend-with-animations/index.html",
     "static/media/arrow-right.svg": "/landing-frontend-with-animations/static/media/arrow-right.edfd1d12d6cd53f843d0cc3201dd866b.svg",
     "static/media/calendar.svg": "/landing-frontend-with-animations/static/media/calendar.f9304e40debd85f4960fff3e8f55ce48.svg",
-    "main.38b27e0f.js.map": "/landing-frontend-with-animations/static/js/main.38b27e0f.js.map",
+    "main.52b84866.js.map": "/landing-frontend-with-animations/static/js/main.52b84866.js.map",
     "787.30faee8c.chunk.js.map": "/landing-frontend-with-animations/static/js/787.30faee8c.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.38b27e0f.js"
+    "static/js/main.52b84866.js"
   ]
 }
