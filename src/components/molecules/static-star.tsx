@@ -79,18 +79,22 @@ interface StaticStarProps {
 }
 
 interface StarProps {
-  background: string;
-  x: string;
-  y: string;
-  top: string;
-  left: string;
-  zoom: number;
-  rotate: number;
+  background?: string;
+  x?: string;
+  y?: string;
+  top?: string;
+  left?: string;
+  zoom?: number;
+  rotate?: number;
 }
 
-const Container = styled.div`
+const Container = styled.div<StarProps>`
   text-align: center;
   z-index: -1;
+  position: absolute;
+  top: ${(props) => props.top};
+  left: ${(props) => props.left};
+  zoom: ${(props) => props.zoom};
 `;
 
 const Star = styled.div<StarProps>`
@@ -98,22 +102,19 @@ const Star = styled.div<StarProps>`
   height: 45px;
   background: url(${(props) => props.background}) no-repeat;
   background-position: ${(props) => props.x} ${(props) => props.y};
-  position: absolute;
-  top: ${(props) => props.top};
-  left: ${(props) => props.left};
-  zoom: ${(props) => props.zoom};
   transform: rotate(${(props) => props.rotate}deg);
   z-index: -1;
 `;
 
 const StaticStar = ({ symbol }: StaticStarProps) => {
   return (
-    <Container>
+    <Container
+      top={starPositions[symbol].top || ''}
+      left={starPositions[symbol].left || ''}
+      zoom={starPositions[symbol].zoom || 1}
+    >
       <Star
         background={TopStarsPng}
-        top={starPositions[symbol].top || ''}
-        left={starPositions[symbol].left || ''}
-        zoom={starPositions[symbol].zoom || 1}
         rotate={starPositions[symbol].rotate || 0}
         x={backgroundPositions[symbol].x || ''}
         y={backgroundPositions[symbol].y || ''}

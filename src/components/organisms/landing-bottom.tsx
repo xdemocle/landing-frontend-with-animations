@@ -1,12 +1,11 @@
-// import useDictionary from '../../hooks/use-dictionary';
 import { useEffect, useState } from 'react';
+import AnimatedStar from '../molecules/animated-star';
 import CoinPot from '../molecules/coin-pot';
 import FloatingCoin from '../molecules/floating-coin';
 import LandingBottomContainer from '../molecules/landing-bottom-container';
 import SunRays from '../molecules/sun-rays';
 
 const LandingBottom = () => {
-  // const dictionary = useDictionary();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -21,6 +20,10 @@ const LandingBottom = () => {
       <SunRays />
       <FloatingCoin />
       <FloatingCoin type="right" />
+      <AnimatedStar />
+      <AnimatedStar />
+      <AnimatedStar />
+      <AnimatedStar />
     </LandingBottomContainer>
   );
 };
